@@ -32,7 +32,7 @@
         <label>Email</label>
         <input placeholder="Enter your email address" key="email-input">
         </p>
-        <button @click="swiswitchover">切换</button>
+        <button @click="switchover">切换</button>
     </div>
   </div>
 </template>
@@ -70,7 +70,7 @@ export default {
     reverseMessage() {
       this.message1 = this.message1.split('').reverse().join('')
     },
-    swiswitchover() {
+    switchover() {
       if(this.loginType =='username'){
         this.loginType='password'
       }else{
