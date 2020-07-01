@@ -1,17 +1,24 @@
 <template>
   <div id="app">
+    <WS></WS>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <WSPLUS></WSPLUS>
   </div>
 </template>
 
 <script>
+
 import HelloWorld from './components/HelloWorld.vue'
+import WS from './components/ws.vue'
+//import WSPLUS from './components/wsplus.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    WS,
+ //   WSPLUS
   }
 }
 </script>
