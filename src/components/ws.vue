@@ -1,5 +1,6 @@
 <template>
   <div class="ws">
+    <div>{{outtitle}}</div>
     <div>{{title}}</div>
     <div>{{subtitle}}</div>
     <div @click="handleChange">change</div>
@@ -44,6 +45,10 @@ export default {
   components: {
     wsplus,
   },
+  props:{
+     outtitle: String,
+     sendOuttitle: Function
+  },
   data() {
     return {
       title: '第一部分',
@@ -69,6 +74,10 @@ export default {
     },
     reverseMessage() {
       this.message1 = this.message1.split('').reverse().join('')
+      
+      // this.sendOuttitle('null image')
+      
+      this.$emit('sendOne', 'emit success')
     },
     switchover() {
       if(this.loginType =='username'){

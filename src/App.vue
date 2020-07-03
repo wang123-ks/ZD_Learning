@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    <WS></WS>
-    <img alt="Vue logo" src="./assets/logo.png">
+    <WS 
+      :outtitle="outtitle" 
+      :sendOuttitle="handleImge" 
+      @sendOne="handleImge" >
+    </WS>
+    <img alt="Vue logo" src="./assets/logo.png" @click="handleClick">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <WSPLUS></WSPLUS>
   </div>
@@ -19,6 +23,21 @@ export default {
     HelloWorld,
     WS,
  //   WSPLUS
+  },
+  data() {
+    return {
+      outtitle: 'zondy',
+      img:''
+    }
+  },
+  methods: {
+    handleClick() {
+      this.outtitle = 'wssssssssssss'
+    },
+    handleImge(image) {
+      console.warn('change',image)
+      this.outtitle = image
+    }
   }
 }
 </script>
